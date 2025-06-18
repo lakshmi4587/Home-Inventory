@@ -1,0 +1,110 @@
+.analytics-container {
+  background-color: #f0f6ff;
+  color: #000000;
+  min-height: 100vh;
+  padding: 10px 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.analytics-title {
+  font-size: 38px;
+  font-weight: bold;
+  margin-bottom: 35px;
+  text-align: center;
+}
+
+.top-section {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin-bottom: 40px;
+  justify-content: center;
+}
+
+.summary-box {
+  background-color: #ffffff;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  width: 380px;
+}
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 5px;
+}
+
+.summary-card {
+  background-color: #f9f9f9;
+  padding: 15px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 0 6px rgba(0, 0, 0, 0.05);
+  border: 2px solid #ddd; /* Added border color */
+}
+
+.summary-label {
+  font-size: 13px;
+  color: #555555;
+  margin-bottom: 8px;
+}
+
+.summary-value {
+  font-size: 20px;
+  font-weight: bold;
+  color: #222222;
+}
+
+.chart-card {
+  background-color: #ffffff;
+  padding: 5px;
+  border-radius: 12px;
+  box-shadow: 0 0 12px rgba(0, 0, 0, 0.1);
+  color: #000000;
+  flex: 1;
+  min-width: 350px;
+  max-width: 600px;
+  margin-bottom: 20px;
+}
+
+.chart-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.bottom-section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+}
+
+.small-chart canvas {
+  max-width: 100% !important;
+  height: 300px !important; /* Increased height for the line chart */
+  margin: 0 auto;
+  display: block;
+}
+
+.loading,
+.error {
+  text-align: center;
+  font-size: 18px;
+  margin-top: 50px;
+  color: #999999;
+}
+
+/* For pie and doughnut charts labels on the right */
+.chartjs-render-monitor {
+  position: relative;
+}
+
+.chart-card .small-chart canvas {
+  max-width: 50% !important;
+  height: 100px !important; /* Set a fixed height for the line chart */
+  margin: 0 auto;
+  display: block;
+}

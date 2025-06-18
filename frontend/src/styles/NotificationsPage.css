@@ -1,0 +1,137 @@
+.notifications-container {
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    font-family: Arial, sans-serif;
+  }
+  
+  .notifications-title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .no-notifications {
+    color: #888;
+    font-size: 16px;
+    text-align: center;
+  }
+  
+  .notifications-box {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px 30px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  }
+  
+  .notifications-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .notification-item {
+    padding: 16px;
+    margin-bottom: 16px;
+    border-radius: 8px;
+    border-left: 6px solid;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease-in-out;
+  }
+  
+  .notification-item:hover {
+    background-color: #d4e8ff;
+    transform: translateX(5px); /* Subtle slide effect on hover */
+  }
+  
+  .notification-title {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 6px;
+    word-wrap: break-word; /* Prevents overflow on long titles */
+  }
+  
+  .notification-message {
+    font-size: 14px;
+    color: #666;
+    margin: 0;
+    word-wrap: break-word; /* Prevents overflow on long messages */
+  }
+  
+  /* Styling for notifications that are marked as read */
+  .notification-item.read {
+    background-color: #f9f9f9;
+    border-color: #ccc;
+    color: #555;
+  }
+  
+  /* Styling for notifications that are unread */
+  .notification-item.unread {
+    background-color: #e6f2ff;
+    border-color: #ff9900;
+    color: #000;
+  }
+  
+  /* Add smooth transition for hover effect */
+  .notification-item:hover {
+    background-color: #d4e8ff;
+  }
+  
+  /* Loading spinner */
+  .loading-spinner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+  }
+  
+  .loading-spinner::before {
+    content: '';
+    border: 3px solid #f3f3f3;
+    border-top: 3px solid #3498db;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    animation: spin 1s linear infinite;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* Improved layout for responsiveness on mobile screens */
+  @media (max-width: 600px) {
+    .notifications-container {
+      padding: 20px 10px;
+    }
+  
+    .notifications-title {
+      font-size: 20px;
+    }
+  
+    .notifications-box {
+      padding: 15px 20px;
+    }
+  
+    .notification-item {
+      padding: 14px;
+    }
+  
+    .notification-title {
+      font-size: 14px;
+    }
+  
+    .notification-message {
+      font-size: 12px;
+    }
+  }
+  
+  /* Accessibility for screen readers */
+  .notification-item[aria-readonly="true"] {
+    background-color: #f2f2f2;
+    cursor: default;
+  }
+  
